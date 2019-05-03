@@ -1,0 +1,41 @@
+.saldo-area{
+    padding-top: 30;
+    padding-bottom: 20;
+    background-color: #DDDDDD;
+}
+
+.saldo{
+    text-align: center;
+    font-size: 25px;
+}
+
+.item-block-interna{
+    min-height: 2.4rem;
+    max-height: 3.4rem;
+}
+
+.item-md-interna{
+    background-color: transparent;
+    padding-left: 0;
+}
+
+.list-md .item-block .item-inner{
+    border-bottom: transparent;
+}
+
+#tipo{
+    text-decoration: none;
+}
+
+.label-md{
+    margin: 5px 8px;
+    padding: 10px;
+    height: 25px;
+    padding-top: 3px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

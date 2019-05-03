@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>MiniMarket Control v1.0</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div class="saldo-area">
+    <div class="saldo">
+      Saldo: R$ {{ state.saldo.toFixed(2) }}
+    </div>
+  </div>
+
+  <br>
+  <ion-list>
+    <div class="item-block-interna item-md-interna" *ngFor="let item of state.historico">
+      <ion-label class="label label-md" *ngIf='item.type === "receita"' style="background: green">
+        <div class="container">
+          <div id="tipo">
+            {{ item.type }}
+          </div>
+          <div>
+            {{ item.valor }}
+          </div>
+        </div>
+      </ion-label>
+      <ion-label class="label label-md" *ngIf='item.type === "despesa"' style="background: #f52a2a">
+        <div class="container">
+          <div id="tipo">
+            {{ item.type }}
+          </div>
+          <div>
+            {{ item.valor }}
+          </div>
+        </div>
+      </ion-label>
+    </div>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+
+  <div id="botao">
+    <button ion-button [navPush]="addReceitaPage">Receita</button>
+    <button ion-button [navPush]="addDespesaPage">Despesa</button>
+    <button ion-button (click)="sair()">Sair</button>
+  </div>
+
+</ion-footer>

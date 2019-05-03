@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>MiniMarket Control v1.0</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h1>Quanto deseja adicionar?</h1>
+
+  <br>
+  <ion-item>
+    <ion-label floating>
+    <ion-icon name='logo-usd'>
+    </ion-icon> Insira o valor </ion-label>
+    <ion-input type="number" step="0.01" min="0.01" [(ngModel)]="state.valor"></ion-input>
+  </ion-item>
+
+  <br>
+  <br>
+  <br>
+
+  <div id="botao">
+    <button ion-button (click)="add()">Adicionar</button>
+  </div>
+
+</ion-content>
